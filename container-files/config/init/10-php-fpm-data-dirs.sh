@@ -13,5 +13,5 @@ mkdir -p /data/run/php-fpm
 chmod 711 /data/log/php-fpm
 chmod 711 /data/run/php-fpm
 
-chown -R 80:80/data/log/php-fpm
-chown -R 80:80 /data/run/php-fpm
+chown -R www:www /data/log/php-fpm
+chown -R www:www /data/run/php-fpm
