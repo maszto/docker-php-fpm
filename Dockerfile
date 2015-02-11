@@ -1,4 +1,4 @@
-FROM maszto/centos-supervisor:latest
+FROM maszto/docker-centos-supervisor:latest
 MAINTAINER Dawid Szymczak dawid.szymczak@masz.to
 
 # - Install PHP and PHP-FPM
