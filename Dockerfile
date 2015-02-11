@@ -25,7 +25,7 @@ RUN \
   chown www /usr/local/bin/composer
 
   groupadd --gid 80 www && \
-  useradd --uid 80 --home /data/www --gid 80 --shell /bin/bash --comment www nginx
+  useradd --uid 80 --home /data/www --gid 80 --shell /bin/bash --comment www www
 
 ADD container-files /
 
