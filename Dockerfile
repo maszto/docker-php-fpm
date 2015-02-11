@@ -17,7 +17,7 @@ RUN \
   yum install -y --disablerepo=epel php-pecl-redis php-pecl-memcached php-pecl-yaml php-pecl-imagick && \
 
   yum install -y newrelic-sysmond && \
-  yum install -y newrelic-php5 &&\
+  yum install -y newrelic-php5 && \
 
   yum clean all && \
 
