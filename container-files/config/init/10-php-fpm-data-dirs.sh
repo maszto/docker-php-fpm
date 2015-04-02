@@ -13,5 +13,14 @@ mkdir -p /data/run/php-fpm
 chmod 711 /data/log/php-fpm
 chmod 711 /data/run/php-fpm
 
-chown -R www:www /data/log/php-fpm
-chown -R www:www /data/run/php-fpm
+#chown -R www:www /data/log/php-fpm
+#chown -R www:www /data/run/php-fpm
+
+mkdir -p /var/lib/php/wsdlcache
+mkdir -p /var/lib/php/session
+
+chown -R www:www /var/lib/php/wsdlcache
+chown -R www:www /var/lib/php/session
+
+umask 0000
+eval "$@"

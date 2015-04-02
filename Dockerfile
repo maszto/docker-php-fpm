@@ -16,9 +16,9 @@ RUN \
   yum-config-manager -q --enable remi && \
   yum-config-manager -q --enable remi-php56 && \
 
-  yum install -y php-fpm php-bcmath php-cli php-gd php-intl php-mbstring \
-                  php-mcrypt php-mysql php-opcache php-pdo && \
-  yum install -y --disablerepo=epel php-pecl-redis php-pecl-memcached php-pecl-yaml php-pecl-imagick && \
+  yum install -y php-fpm php-bcmath php-cli php-gd php-intl php-mbstring php-soap \
+                  php-mcrypt php-mysql php-opcache php-pdo php-pecl-http && \
+  yum install -y --disablerepo=epel php-pecl-redis php-pecl-memcached php-pecl-yaml php-pecl-imagick php-pecl-xdebug && \
 
   yum install -y newrelic-sysmond && \
   yum install -y newrelic-php5 && \
@@ -31,3 +31,4 @@ RUN \
 ADD container-files /
 
 EXPOSE 9000
+EXPOSE 9090

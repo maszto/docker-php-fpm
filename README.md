@@ -1,5 +1,7 @@
 # PHP-FPM Docker container
 
+### Inspired by [million12/docker-centos-supervisor](https://github.com/million12/docker-centos-supervisor) Thank You for awesome piece of work.
+
 This is a [maszto/docker-php-fpm](https://registry.hub.docker.com/u/maszto/docker-php-fpm/) docker container with tweaked PHP-FPM server.
 
 Things included:
@@ -22,11 +24,18 @@ Folders `/etc/php-fpm/` and `/data/conf/nginx/` are monitored for any config cha
 
 ## Usage
 
-`docker run -d -p=80:80 -p=443:443 million12/nginx`
+`docker run -d -p=9000:9000 --name php-fpm maszto/docker-php-fpm`
 
 With data container:  
 ```
 docker run -d -v /data --name=web-data busybox
-docker run -d --volumes-from=web-data -p=80:80 --name=web million12/nginx
+docker run -d --volumes-from=web-data -p=9000:9000 --name=php-fpm maszto/docker-php-fpm
 ```
+
+With data container from localdrive:  
+```
+docker run -d -v /data:/data:ro --name=web-data busybox
+docker run -d --volumes-from=web-data -p=9000:9000 --name=php-fpm maszto/docker-php-fpm
+```
+
 
