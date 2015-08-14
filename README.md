@@ -38,4 +38,8 @@ docker run -d -v /data:/data:ro --name=web-data busybox
 docker run -d --volumes-from=web-data -p=9000:9000 --name=php-fpm maszto/docker-php-fpm
 ```
 
+## Remote XDebug
+
+For Vagrant remote debug usage you need to make sure your Vagrant related VBox interface has IP address 172.17.8.1.
+
 

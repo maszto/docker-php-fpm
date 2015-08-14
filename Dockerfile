@@ -31,4 +31,3 @@ RUN \
 ADD container-files /
 
 EXPOSE 9000
-EXPOSE 9090
