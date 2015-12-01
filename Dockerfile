@@ -11,7 +11,7 @@ RUN \
   yum install -y yum-utils && \
 
   rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm && \
-  rpm -Uvh https://yum.newrelic.com/pub/newrelic/el5/x86_64/newrelic-repo-5-3.noarch.rpm && \
+#  rpm -Uvh https://yum.newrelic.com/pub/newrelic/el5/x86_64/newrelic-repo-5-3.noarch.rpm && \
 
   yum-config-manager -q --enable remi && \
   yum-config-manager -q --enable remi-php56 && \
@@ -20,8 +20,8 @@ RUN \
                   php-mcrypt php-mysql php-opcache php-pdo php-pecl-http && php-pecl-amqp \
   yum install -y --disablerepo=epel php-pecl-redis php-pecl-memcached php-pecl-yaml php-pecl-imagick php-pecl-xdebug && \
 
-  yum install -y newrelic-sysmond && \
-  yum install -y newrelic-php5 && \
+#  yum install -y newrelic-sysmond && \
+#  yum install -y newrelic-php5 && \
 
   yum clean all && \
 
